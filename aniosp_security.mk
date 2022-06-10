@@ -3,6 +3,7 @@
 # Copyright (C) 2021 Haruka LLC.
 # Copyright (C) 2021 Haruka Aita
 # Copyright (C) 2021 The Evolution X Project
+# Copyright (C) 2022 AniOSP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +19,7 @@
 #
 
 # Define security directory
-PROD_CERTS := vendor/evolution/build/target/product/security
+PROD_CERTS := vendor/aniosp/build/target/product/security
 
 # Somehow, our build system managed to not include releasekey in which we have to
 # investigate,

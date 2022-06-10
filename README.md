@@ -1,8 +1,8 @@
-This repository belongs to ```vendor/evolution/build/target/product/security```
+This repository belongs to ```vendor/aniosp/build/target/product/security```
 
 After cloning to the specific path, please run generate-keys.sh
 
-Please note, that ```mka evolution``` may not work properly if you have this repository cloned.
+Please note, that ```mka aniosp``` may not work properly if you have this repository cloned.
 
 Please refer to [this AOSP documentation](https://android.googlesource.com/platform/external/avb/+/refs/tags/android-11.0.0_r39/README.md#build-system-integration) on how to assign custom AVB keys
 
@@ -14,12 +14,12 @@ for device with vbmeta_system
 After putting it together, it should look like this
 ```
 BOARD_AVB_ENABLE := true
-BOARD_AVB_KEY_PATH := $(PROD_CERTS)/evolution_rsa4096.pem
+BOARD_AVB_KEY_PATH := $(PROD_CERTS)/aniosp_rsa4096.pem
 BOARD_AVB_ALGORITHM := SHA256_RSA4096
-BOARD_AVB_RECOVERY_KEY_PATH := $(PROD_CERTS)/evolution_rsa2048.pem
+BOARD_AVB_RECOVERY_KEY_PATH := $(PROD_CERTS)/aniosp_rsa2048.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
 # For devices with VBMETA_SYSTEM
-BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := $(PROD_CERTS)/evolution_rsa2048.pem
+BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := $(PROD_CERTS)/aniosp_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 ```
 
@@ -32,7 +32,7 @@ Please note that a clean flash is required when build signing keys get changed.
 Please save your private keys to use in future builds, otherwise you would have to generate new keys, which would require further clean flashes. 
 
 To build a production build, run
-```mka evolution-prod```
+```mka aniosp-prod```
 
 If your device does not boot, please look out for any proprietary applications that may be using a presigned key instead of a platform key.
 
